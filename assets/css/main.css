@@ -31,6 +31,9 @@ body {
 
 h1 {
 
+  text-shadow: 2px 1px #dc2286, -2px -1px #09c;
+
+  font-size: clamp(24px, 10vh, 48px);
   text-align: center;
 
   z-index: 2;
