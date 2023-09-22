@@ -13,14 +13,15 @@ const replaceAntlers = (className, placeholder, content) => {
 }
 
 
+const getRandomArrayEntry = (data) => data[Math.floor(Math.random() * data.length)]
+
+
 
 
 
 ;(async function (){
 
   const fqmMeanings = await getData('assets/meanings.json')
-  const fqmMeaning  = fqmMeanings[Math.floor(Math.random() * fqmMeanings.length)]
-
-  return replaceAntlers('.js--replace-tagline', 'Flex Queue Madness', fqmMeaning)
+  return replaceAntlers('.js--replace-tagline', 'Flex Queue Madness', getRandomArrayEntry(fqmMeanings))
 
 })()
